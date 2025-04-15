@@ -1,6 +1,66 @@
+body{
+  background-image: url("../images/logo\ web\ project\ \ \(Website\).jpg");
+  background-size: 900px;
+  margin: 20;
+  font-size: medium;
+  font-family: Georgia, 'Times New Roman', Times, serif
+  }
+
+h1{
+  color: rgb(0, 0, 0);
+  font-style: oblique;
+  font-size: 50px;
+  outline-color: #681cec;
+}
+
+h2{
+  font-family: Haettenschweiler, 'Times New Roman', sans-serif;
+  text-align: center;
+}
+p{
+  color: rgb(0, 0, 0);
+  font-family: Haettenschweiler, 'Times New Roman', sans-serif;
+  text-align: center;
+  font-size: large;
+}
+
+
 img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
+  border: 50px solid #ee2e2e00;
+  height: 100px;
+  width: 380px;
+  opacity: 20;
+ 
+}
+.topnav {
+  background-color: #fff200;
+  overflow: hidden;
+  text-align: center;
+ list-style: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  word-spacing: 100px;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 2px 8px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #0f7aec;
+  
 }
