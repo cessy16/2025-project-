@@ -1,32 +1,8 @@
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html>
-    <head>
-        </style>
-        <title>EcuaDominicanFoodRecipe.com </title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-        
-    </head> 
-    <body>
-        <h1>
-            <center>Welcome to Ecua Dominican Food Recipe</center>
-            
-    </h1>
-</body>
-     <p>User will need to create a login account </p> 
-</body>  
+{% block title %}Home - EcuaDominicanFoodRecipe.com{% endblock %}
 
-        <div class="topnav">
-              <li><a class="active" href="#home">Home<Home</a></li>
-            <li><a href="#Ecuadorian Recipe">EcuadorianRecipe</a></li>
-            <li><a href="#Dominican">DominicanRecipe</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-          </div>
-          <center><img src="{{ url_for('static', filename='images/logo web project  (Website).jpg') }}" alt="Stock Market Image" class="centered-image"></center>
-        <h2><center>Creators Cesarina and Michelle</center><h2>
-            <left><p>Food Lovers of traditional Ecuadorian and Dominican dishes!</p></left>
-       
-    </body>
-</html>
-
+{% block content %}
+    <h2>Welcome to the Home Page!</h2>
+    <p>Explore authentic Ecuadorian and Dominican recipes.</p>
+{% endblock %}

@@ -1,0 +1,41 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}EcuaDominicanFoodRecipe.com{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <center><h1>Welcome to Ecua Dominican Food Recipe</h1></center>
+    </header>
+
+    <p>User will need to create a login account</p>
+
+    <nav class="topnav">
+        <ul>
+            <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('ecuadorian_recipe') }}">Ecuadorian Recipe</a></li>
+            <li><a href="{{ url_for('dominican_recipe') }}">Dominican Recipe</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+
+    <center>
+        <img src="{{ url_for('static', filename='images/logo web project  (Website).jpg') }}" alt="Logo" class="centered-image">
+    </center>
+
+    <center><h2>Creators Cesarina and Michelle</h2></center>
+
+    <p style="text-align:left;">Food Lovers of traditional Ecuadorian and Dominican dishes!</p>
+
+    <!-- This is where every page will insert its unique content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

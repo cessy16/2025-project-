@@ -8,8 +8,24 @@ from hashlib import *;
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return render_template('/index.html')
+def index():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/dominican')
+def dominican_recipe():
+    return render_template('DominicanRecipe.html')
+
+@app.route('/ecuadorian')
+def ecuadorian_recipe():
+    return render_template('EcuadorianRecipe.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('Userlogin.html')
 
 if __name__ == '__main__':
     app.run(debug = True)

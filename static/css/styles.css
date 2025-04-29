@@ -33,10 +33,34 @@ img {
  
 }
 .topnav {
-  background-color: #fff200;
+  background-color: #007BFF;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
   text-align: center;
  list-style: none;
+}
+
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* center nav items */
+  gap: 20px; /* space between links */
+}
+
+.topnav li {
+  display: inline;
+}
+
+.topnav a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 ul {
@@ -44,7 +68,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #007BFF;
 }
 
 li {
