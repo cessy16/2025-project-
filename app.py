@@ -25,6 +25,10 @@ def ecuadorian_recipe():
 
 @app.route('/contact')
 def contact():
+    return render_template('contact.html')
+
+@app.route('/login')
+def login():
     return render_template('Userlogin.html')
 
 if __name__ == '__main__':
