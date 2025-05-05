@@ -3,4 +3,39 @@
 {% block title %}Home - EcuaDominicanFoodRecipe.com{% endblock %}
 
 {% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EcuaDominicanFoodRecipe.com </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <style>
+        .container{
+            width:100%;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            }
+         .col-1{
+            flex-basis: 50%;
+            flex-grow: 1;
+            background-image: -moz-linear-gradient(rga(0,0,0,0.8),rgba(0, 47, 255, 0.8)),url(image/image.jpg);
+            background-size: cover;
+            background-position: center;
+            }
+    </style>
+<div class="container">
+    <div class="col-1">
+        
+    </div>
+    <div class="col-2"></div>
+</div>
+</body>
+</html>
+
+
+<img src="static/images/shrimp-ceviche-ecuadorian-style.webp" alt="ceviche" class="center-left-image" style="width: 600px;height: 400px;">
 {% endblock %}

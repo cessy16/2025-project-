@@ -1,8 +1,53 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script>
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value;
 
-{% block title %}Home - EcuaDominicanFoodRecipe.com{% endblock %}
+            // Username validation (5+ characters)
+            if (username.length < 5) {
+                alert("Username must be at least 5 characters long.");
+                return false;
+            }
 
-{% block content %}
-    
-{% endblock %}
+            // Password validation (8+ chars, 1 uppercase, 1 lowercase, 1 symbol)
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                alert("Password must be at least 8 characters long, include 1 uppercase letter, 1 lowercase letter, and 1 symbol.");
+                return false;
+            }
+
+            // Email validation (simple)
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form onsubmit="return validateForm()" action="/register" method="POST">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
 

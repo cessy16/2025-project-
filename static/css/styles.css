@@ -1,5 +1,6 @@
 body{
   background-image: url("../images/logo\ web\ project\ \ \(Website\).jpg");
+  bottom: 10px;
   background-size: 900px;
   margin: 20;
   font-size: medium;
@@ -7,18 +8,22 @@ body{
   }
 
 h1{
-  color: rgb(0, 0, 0);
+  color: rgb(221, 216, 216);
   font-style: oblique;
   font-size: 50px;
   outline-color: #681cec;
+
 }
 
 h2{
   font-family: Haettenschweiler, 'Times New Roman', sans-serif;
   text-align: center;
+  font-style: bold;
+  color:rgb(62, 104, 255);
 }
+  
 p{
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: Haettenschweiler, 'Times New Roman', sans-serif;
   text-align: center;
   font-size: large;
@@ -26,6 +31,7 @@ p{
 
 
 img {
+  margin: auto;
   border: 50px solid #ee2e2e00;
   height: 100px;
   width: 380px;
@@ -87,4 +93,23 @@ li a {
 li a:hover {
   background-color: #0f7aec;
   
+}
+
+.container{
+  width:100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.col-1{
+  flex-basis: 50%;
+  flex-grow: 1;
+  background-image: -moz-linear-gradient(rga(0,0,0,0.8),rgba(0,0,0,0.8)),url(image/image.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.col-2{
+  flex-basis: 50%;
+  flex-grow: 1;
 }
