@@ -133,8 +133,9 @@ def ecuadorian_recipe():
 def contact():
     return render_template('contact.html')
 
-@app.route('/userlogin')
-def userlogin():
-    return render_template('login.html')
+@app.route('/Login')
+def Login():
+    return render_template('Login.html')
+
 
 
