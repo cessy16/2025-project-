@@ -140,6 +140,10 @@ def contact():
 def Login():
     return render_template('Login.html')
 
+@app.route('/shop')
+def shop():
+    return render_template('shop.html')
+
 
 #login information tab##
 #app = Flask(__name__)
