@@ -5,6 +5,7 @@ from flask_mail import Mail, Message
 import bcrypt
 import random
 import string
+import sqlite3
 
 ## 
 app = Flask(__name__)
@@ -28,9 +29,9 @@ class User(db.Model):
     is_verified = db.Column(db.Boolean, default=False)
     member_id = db.Column(db.String(120), unique=True, nullable=False)
 
-@app.route('/')
-def index():
-    return render_template('register.html')
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -108,10 +109,12 @@ if __name__ == '__main__':
 
 
 
+
+
 ## the instances that Flask creates, are used to 
 ## manage the outes (URL triggers)
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -138,4 +141,48 @@ def Login():
     return render_template('Login.html')
 
 
+#login information tab##
+#app = Flask(__name__)
 
+# # Function to initialize DB
+# def init_db():
+#     conn = sqlite3.connect('users.db')
+#     cursor = conn.cursor()
+#     cursor.execute('''
+#     CREATE TABLE IF NOT EXISTS users (
+#         id INTEGER PRIMARY KEY AUTOINCREMENT,
+#         username TEXT NOT NULL UNIQUE,
+#         password TEXT NOT NULL
+#     )
+#     ''')
+#     # Add a test user
+#     cursor.execute("INSERT OR IGNORE INTO users (username, password) VALUES (?, ?)", ('testuser', 'testpass'))
+#     conn.commit()
+#     conn.close()
+
+# init_db()
+
+# # Route to display login form and process login
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     if request.method == 'POST':
+#         username = request.form['username']
+#         password = request.form['password']
+
+#         conn = sqlite3.connect('users.db')
+#         cursor = conn.cursor()
+
+#         cursor.execute("SELECT * FROM users WHERE username=? AND password=?", (username, password))
+#         user = cursor.fetchone()
+
+#         conn.close()
+
+#         if user:
+#             return "Login successful! Welcome, " + username
+#         else:
+#             return "Invalid username or password."
+
+#     return render_template('login.html')
+
+if __name__ == '__main__':
+    app 
